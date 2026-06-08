@@ -1,0 +1,20 @@
+services:
+  backend:
+    build: ./websocket-server
+    ports:
+      - "8080:8080"
+
+  sender:
+    build: ./websocket-website-sender
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+
+  receiver:
+    build: ./websocket-website-receiver
+    ports:
+      - "3001:3001"
+    depends_on:
+      - backend
+
