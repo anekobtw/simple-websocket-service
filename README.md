@@ -1,4 +1,4 @@
-#websocket
+# websocket
 
 That's a simple text syncing system implemented via WebSockets.
 
@@ -9,5 +9,8 @@ There are 2 frontend apps:
 Both connect to:
 `ws://localhost:8080/text`
 
-
-
+# Run
+To run the server:
+```bash
+docker-compose up --build
+```
